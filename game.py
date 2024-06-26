@@ -22,3 +22,12 @@ def guess_code():
             print(f"You must guess ${CODE_LENGTH} colors.")
             continue
 
+        for color in guess:
+            if color not in COLORS:
+                print(f"{color} is not a valid color.")
+                break
+        else:
+            break
+    
+    return guess
+
